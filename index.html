@@ -12,12 +12,20 @@
   <main>
     <h1>Vanilla JavaScript App</h1>
     <p>Loading content from the API: <b id="name">...</b></p>
+    <h1>Vanilla JavaScript App</h1>
+    <p>Loading content from the API: <b id="name2">...</b></p>
   </main>
 
   <script>
     (async function() {
       let { text } = await( await fetch(`/api/message`)).json();
       document.querySelector('#name').textContent = text;
+    }())
+  </script>
+  <script>
+    (async function() {
+      let { text2 } = await( await fetch(`/api/message`)).json();
+      document.querySelector('#name2').textContent = text2;
     }())
   </script>
 </body>
